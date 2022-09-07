@@ -17,36 +17,6 @@ module.exports = {
     themeConfig: {
         logo: '/icon5.png',
         subSidebar: 'auto', //子侧边栏放在页面的右侧
-        // nav: [
-        //     { text: '首页', link: '/' },
-        //     { 
-        //         text: 'bill.yan博客', 
-        //         items: [
-        //             { text: 'Github', link: 'https://github.com/bill-yan98' },
-        //             // { text: '掘金', link: 'https://juejin.cn/user/712139234359182/posts' }
-        //         ]
-        //     }
-        // ],
-        // sidebar: [
-        //     {
-        //         title: '欢迎学习',
-        //         path: '/',
-        //         collapsable: false, // 不折叠
-        //         children: [
-        //             { title: "学前必读", path: "/" }
-        //         ]
-        //     },
-        //     {
-        //       title: "基础学习",
-        //       path: '/handbook/ConditionalTypes',
-        //       collapsable: false, // 不折叠
-        //       children: [
-        //         { title: "条件类型", path: "/handbook/ConditionalTypes" },
-        //         { title: "泛型", path: "/handbook/Generics" }
-        //       ],
-        //     }
-        // ]
-
         //顶部导航栏   
         nav: [           
             //格式一：直接跳转，'/'为不添加路由，跳转至首页
@@ -56,7 +26,7 @@ module.exports = {
                 text: '分类',  //默认显示        
                 ariaLabel: '分类',   //用于识别的label
                 items: [
-                    { text: '文章', link: '/pages/folder1/test1.md' },  
+                    { text: '文章', link: '/pages/folder1/compress.md' },  
                     //点击标签会跳转至link的markdown文件生成的页面
                     { text: '琐碎', link: '/pages/folder2/test4.md' },
                 ]
@@ -69,19 +39,18 @@ module.exports = {
         sidebar: {
             '/pages/folder1/':[         
                 {
-                    title: '测试菜单1',   // 一级菜单名称
+                    title: '性能优化',   // 一级菜单名称
                     collapsable: false, // false为默认展开菜单, 默认值true是折叠,
                     sidebarDepth: 1,    //  设置侧边导航自动提取markdown文件标题的层级，默认1为h2层级
                     children: [
-                        ['test1.md', '子菜单1'],  //菜单名称为'子菜单1'，跳转至/pages/folder1/test1.md
-                        ['test3.md', '子菜单2']
+                        ['compress.md', '图片压缩'],  //菜单名称为'子菜单1'，跳转至/pages/folder1/test1.md
                     ]
                 },
                 {
-                    title: '测试菜单2',
+                    title: '地图相关',
                     collapsable: false, 
                     children: [
-                        ['test2.md', '子菜单1']
+                        ['mapTool.md', '地理小工具']
                     ]
                 }
             ],
